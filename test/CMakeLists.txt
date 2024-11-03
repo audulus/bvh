@@ -7,6 +7,11 @@ target_link_libraries(simple_example PUBLIC bvh)
 set_target_properties(simple_example PROPERTIES CXX_STANDARD 20)
 add_test(NAME simple_example COMMAND simple_example)
 
+add_executable(two_boxes two_boxes.cpp)
+target_link_libraries(two_boxes PUBLIC bvh)
+set_target_properties(two_boxes PROPERTIES CXX_STANDARD 20)
+add_test(NAME two_boxes COMMAND two_boxes)
+
 add_executable(serialize serialize.cpp)
 target_link_libraries(serialize PUBLIC bvh)
 set_target_properties(serialize PROPERTIES CXX_STANDARD 20)
