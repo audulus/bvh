@@ -42,7 +42,7 @@ int main() {
     };
 
     static constexpr size_t stack_size = 64;
-    static constexpr bool use_robust_traversal = false;
+    static constexpr bool use_robust_traversal = true;
 
     bvh::v2::SmallStack<Bvh::Index, stack_size> stack;
     bvh.intersect<false, use_robust_traversal>(ray, bvh.get_root().index, stack,
