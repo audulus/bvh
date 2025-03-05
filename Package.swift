@@ -1,9 +1,12 @@
-// swift-tools-version: 5.8
+// swift-tools-version: 6.0
 
 import PackageDescription
 
 let package = Package(
     name: "bvh",
+    platforms: [
+        .macOS(.v15), .iOS(.v18)
+    ],
     products: [
         .library(
             name: "bvh",
